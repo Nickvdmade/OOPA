@@ -110,6 +110,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circuit.cpp" />
+    <ClCompile Include="FileReader.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="Observer.cpp" />
+    <ClCompile Include="Subject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Circuit.h" />
+    <ClInclude Include="FileReader.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="Observer.h" />
+    <ClInclude Include="Subject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="circuit1.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
