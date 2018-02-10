@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Ports">
+      <UniqueIdentifier>{ad6bbbef-112f-47df-be91-ab70ecbc2504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Ports">
+      <UniqueIdentifier>{659a8b5c-f804-40df-b468-afeea423d5d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -33,6 +39,36 @@
     <ClCompile Include="Node.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="And.cpp">
+      <Filter>Source Files\Ports</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files\Ports</Filter>
+    </ClCompile>
+    <ClCompile Include="Nand.cpp">
+      <Filter>Source Files\Ports</Filter>
+    </ClCompile>
+    <ClCompile Include="Nor.cpp">
+      <Filter>Source Files\Ports</Filter>
+    </ClCompile>
+    <ClCompile Include="Not.cpp">
+      <Filter>Source Files\Ports</Filter>
+    </ClCompile>
+    <ClCompile Include="Or.cpp">
+      <Filter>Source Files\Ports</Filter>
+    </ClCompile>
+    <ClCompile Include="Port.cpp">
+      <Filter>Source Files\Ports</Filter>
+    </ClCompile>
+    <ClCompile Include="Probe.cpp">
+      <Filter>Source Files\Ports</Filter>
+    </ClCompile>
+    <ClCompile Include="Xor.cpp">
+      <Filter>Source Files\Ports</Filter>
+    </ClCompile>
+    <ClCompile Include="PortFactory.cpp">
+      <Filter>Source Files\Ports</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circuit.h">
@@ -47,8 +83,38 @@
     <ClInclude Include="Subject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="And.h">
+      <Filter>Header Files\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="Nand.h">
+      <Filter>Header Files\Ports</Filter>
+    </ClInclude>
     <ClInclude Include="Node.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="Nor.h">
+      <Filter>Header Files\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="Not.h">
+      <Filter>Header Files\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="Or.h">
+      <Filter>Header Files\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="Port.h">
+      <Filter>Header Files\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="Xor.h">
+      <Filter>Header Files\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="Probe.h">
+      <Filter>Header Files\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Header Files\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="PortFactory.h">
+      <Filter>Header Files\Ports</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

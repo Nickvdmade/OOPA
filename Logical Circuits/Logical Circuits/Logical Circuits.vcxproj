@@ -110,19 +110,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="And.cpp" />
     <ClCompile Include="Circuit.cpp" />
     <ClCompile Include="FileReader.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Nand.cpp" />
     <ClCompile Include="Node.cpp" />
+    <ClCompile Include="Nor.cpp" />
+    <ClCompile Include="Not.cpp" />
     <ClCompile Include="Observer.cpp" />
+    <ClCompile Include="Or.cpp" />
+    <ClCompile Include="Port.cpp" />
+    <ClCompile Include="PortFactory.cpp" />
+    <ClCompile Include="Probe.cpp" />
     <ClCompile Include="Subject.cpp" />
+    <ClCompile Include="Xor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="And.h" />
     <ClInclude Include="Circuit.h" />
     <ClInclude Include="FileReader.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="Nand.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="Nor.h" />
+    <ClInclude Include="Not.h" />
     <ClInclude Include="Observer.h" />
+    <ClInclude Include="Or.h" />
+    <ClInclude Include="Port.h" />
+    <ClInclude Include="PortFactory.h" />
+    <ClInclude Include="Probe.h" />
     <ClInclude Include="Subject.h" />
+    <ClInclude Include="Xor.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="circuit1.txt" />

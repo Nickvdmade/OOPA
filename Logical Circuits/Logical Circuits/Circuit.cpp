@@ -12,6 +12,21 @@ Circuit::~Circuit()
 void Circuit::createCircuit(std::string name)
 {
 	std::vector<std::string> info = FileReader::readFile(name);
+	for (int i = 0; i < info.size(); i++)
+	{
+		std::string line = info[i];
+		if (line[0] != '#')
+		{
+			int startposition = 0;
+			int position = line.find(':');
+			std::string name = line.substr(startposition, position - 1 - startposition);
+			for (; (line[position] == ' ' || line[position] == '\t') && position < line.size(); position++);
+			startposition = position;
+			position = line.find(';');
+			std::string type = line.substr(startposition, position - 1 - startposition);
+
+		}
+	}
 }
 
 void Circuit::calculateResult()

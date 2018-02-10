@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="b6dee9be-e37a-4a10-b211-6d48703c2675" name="Logical Circuits v2" linkedPackageId="51cbff82-c894-4a82-b5f0-8be1e88e9d5a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="8ffe272a-f15d-4f66-b81c-7d04c272e5ba">
-      <profileInstance Id="ddb1f814-42c3-4fa7-85a3-b23589b918f8" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="aa99e59f-5ecd-4841-9c41-ded79b9f7857">
-      <profileInstance Id="5063350f-ec8d-4699-91a8-58e8083925fa" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <referencedType Id="723eaf36-f4f6-467c-9006-ff0ce6cd425e" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
@@ -394,10 +380,10 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="aaef14c1-a01b-4e6b-a61d-8605925fc737" name="ports_" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="aaef14c1-a01b-4e6b-a61d-8605925fc737" name="ports_" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="149901e0-8110-4a83-bf61-5fe713461711" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="f06b7668-1bf5-4fae-8159-ba4b36b2649f" LastKnownName="map&lt;string, Port*&gt;" />
+              <referencedTypeMoniker Id="af394afe-357e-4938-a47f-86f9884cd6a5" LastKnownName="map&lt;string, Port*&gt;" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -715,17 +701,31 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="f06b7668-1bf5-4fae-8159-ba4b36b2649f" name="map&lt;string, Port*&gt;" isAbstract="false" isLeaf="false" cachedFullName="map&lt;string, Port*&gt;">
-        <elementDefinition Id="c823e7ab-2628-407b-8900-76802a495e5d" />
+      <referencedType Id="1a94bbe8-3000-42a3-a4a7-b8f3b836af03" name="map&lt;Node*,bool&gt;" isAbstract="false" isLeaf="false" cachedFullName="map&lt;Node*,bool&gt;">
+        <elementDefinition Id="47c94f58-6b30-40e2-b85b-92a23d0247e3" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="1a94bbe8-3000-42a3-a4a7-b8f3b836af03" name="map&lt;Node*,bool&gt;" isAbstract="false" isLeaf="false" cachedFullName="map&lt;Node*,bool&gt;">
-        <elementDefinition Id="47c94f58-6b30-40e2-b85b-92a23d0247e3" />
+      <referencedType Id="af394afe-357e-4938-a47f-86f9884cd6a5" name="map&lt;string, Port*&gt;" isAbstract="false" isLeaf="false" cachedFullName="map&lt;string, Port*&gt;">
+        <elementDefinition Id="c823e7ab-2628-407b-8900-76802a495e5d" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
   <package Id="51cbff82-c894-4a82-b5f0-8be1e88e9d5a" name="Logical Circuits Models">
     <elementDefinition Id="d19ab128-b45a-404b-9e81-4bb1ea322398" />
+    <profileInstances>
+      <packageHasProfileInstances Id="8ffe272a-f15d-4f66-b81c-7d04c272e5ba">
+        <profileInstance Id="ddb1f814-42c3-4fa7-85a3-b23589b918f8" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="aa99e59f-5ecd-4841-9c41-ded79b9f7857">
+        <profileInstance Id="5063350f-ec8d-4699-91a8-58e8083925fa" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

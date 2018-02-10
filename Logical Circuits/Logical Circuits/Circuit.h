@@ -2,6 +2,7 @@
 #include <string>
 #include <map>
 #include "Node.h"
+#include <memory>
 
 class Circuit
 {
@@ -13,6 +14,6 @@ public:
 	void showResult();
 
 private:
-	std::map<Node*, std::string> nodes_;
+	std::map<std::shared_ptr<Node>, std::string> nodes_;
 };
 
