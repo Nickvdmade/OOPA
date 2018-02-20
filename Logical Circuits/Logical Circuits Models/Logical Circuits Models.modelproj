@@ -44,6 +44,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Logical Circuits v3.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Logical Circuits v4.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Logical Circuits v4.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Logical Circuits v4.classdiagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\Logical Circuits Models.uml">
       <SubType>Content</SubType>
     </Content>

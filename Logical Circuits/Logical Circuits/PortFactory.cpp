@@ -1,6 +1,22 @@
 #include "PortFactory.h"
 #include <sstream>
 
+std::unique_ptr<PortFactory> PortFactory::instance_;
+
+PortFactory::PortFactory()
+{
+}
+
+PortFactory& PortFactory::instance()
+{
+	if (instance_ == nullptr)
+	{
+		PortFactory factory;
+		instance_ = std::make_unique<PortFactory>(factory);
+	}
+	return *instance_;
+}
+
 void PortFactory::addPort(std::string name, Port port)
 {
 	if (ports_.find(name) == ports_.end())

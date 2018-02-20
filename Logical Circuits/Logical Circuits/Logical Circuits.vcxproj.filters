@@ -89,9 +89,6 @@
     <ClInclude Include="Nand.h">
       <Filter>Header Files\Ports</Filter>
     </ClInclude>
-    <ClInclude Include="Node.h">
-      <Filter>Header Files\Ports</Filter>
-    </ClInclude>
     <ClInclude Include="Nor.h">
       <Filter>Header Files\Ports</Filter>
     </ClInclude>
@@ -115,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="PortFactory.h">
       <Filter>Header Files\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

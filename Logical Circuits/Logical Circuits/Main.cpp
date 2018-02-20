@@ -12,25 +12,25 @@
 
 void setup()
 {
-	//PortFactory portFactory = PortFactory::instance();
+	PortFactory& portFactory = PortFactory::instance();
 	Port highInput = Input(1);
-	PortFactory::addPort("INPUT_HIGH", highInput);
+	portFactory.addPort("INPUT_HIGH", highInput);
 	Port lowInput = Input(0);
-	PortFactory::addPort("INPUT_LOW", lowInput);
+	portFactory.addPort("INPUT_LOW", lowInput);
 	Port probe = Probe();
-	PortFactory::addPort("PROBE", probe);
+	portFactory.addPort("PROBE", probe);
 	Port and = And();
-	PortFactory::addPort("AND", and);
+	portFactory.addPort("AND", and);
 	Port nand = Nand();
-	PortFactory::addPort("NAND", nand);
+	portFactory.addPort("NAND", nand);
 	Port or = Or();
-	PortFactory::addPort("OR", or);
+	portFactory.addPort("OR", or);
 	Port nor = Nor();
-	PortFactory::addPort("NOR", nor);
+	portFactory.addPort("NOR", nor);
 	Port xor = Xor();
-	PortFactory::addPort("XOR", xor);
+	portFactory.addPort("XOR", xor);
 	Port not = Not();
-	PortFactory::addPort("NOT", not);
+	portFactory.addPort("NOT", not);
 }
 
 void main()

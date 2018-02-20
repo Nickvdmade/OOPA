@@ -1,0 +1,796 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="3ca0bde8-0c73-4e74-b040-5e0b2e63a850" name="Logical Circuits v4" linkedPackageId="62e6e12f-9a96-4827-b0bd-26a28fbc68b7" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="97e14d0e-e23c-4772-9323-829f424efbf8">
+      <profileInstance Id="6dba757b-b93b-4d5a-ac09-3554234a15fe" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="1b7a273c-3fc9-4718-ad31-383578281d63">
+      <profileInstance Id="c317477b-7b46-4fa9-a4bb-9e5a17325f41" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <referencedType Id="005b3b82-3b9e-4f99-acf2-ca2c658b0e2d" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="8ca73579-0cca-4042-89e6-2f12cbb11b95" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="34c1980f-f8d9-4d33-a42c-87f64cbd4250" name="map&lt;Node*,bool&gt;" isAbstract="false" isLeaf="false" cachedFullName="map&lt;Node*,bool&gt;">
+        <elementDefinition Id="47c94f58-6b30-40e2-b85b-92a23d0247e3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="27d171c7-0826-4a0d-8e61-9539df8bf35b" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
+        <elementDefinition Id="940182b2-1daf-49d7-9c20-3f72673360bc" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6fef2dad-dacc-46f2-932a-c4dc49c0c9dc" name="map&lt;string, Port*&gt;" isAbstract="false" isLeaf="false" cachedFullName="map&lt;string, Port*&gt;">
+        <elementDefinition Id="c823e7ab-2628-407b-8900-76802a495e5d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e55ca7f4-4842-400c-9ac7-795a4f40874d" name="Port*" isAbstract="false" isLeaf="false" cachedFullName="Port*">
+        <elementDefinition Id="87a2b666-1226-428f-923c-da4e2fd0fbe0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3990eeb4-75f3-4290-ab4f-bf6072fb7bd0" name="map&lt;Node*, string&gt;" isAbstract="false" isLeaf="false" cachedFullName="map&lt;Node*, string&gt;">
+        <elementDefinition Id="4136fa68-492e-467a-a39c-6c9ea1ff348b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="919671d1-fcdf-4440-bff1-a0c9051304bd" name="vector&lt;string&gt;" isAbstract="false" isLeaf="false" cachedFullName="vector&lt;string&gt;">
+        <elementDefinition Id="cc087227-14f1-41c1-8e53-cb5742c3d9ad" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e27b9646-a7d2-48de-b839-f6b275ee5d9c" name="vector&lt;Observer*&gt;" isAbstract="false" isLeaf="false" cachedFullName="vector&lt;Observer*&gt;">
+        <elementDefinition Id="953ce9d5-077d-42f2-8ff5-8fadc9001107" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="63fa9fdf-1af7-4e56-8cd7-96e4b026a3ef" name="Not" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d518b3e2-7198-4412-b839-bf3cf03dc736" />
+        <generalsInternal>
+          <generalization Id="867154a8-2fe2-423d-aefd-8cdc77efe629" isSubstitutable="false">
+            <classMoniker Id="842a53b0-8456-472d-89b5-20bdc4f621db" LastKnownName="Port" />
+            <elementDefinition Id="6f575277-65b4-45c7-9c6c-39c654e29493" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="a8609eb0-4fc9-4677-a427-e52b8b86128a" name="calculateOutput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e4cc88be-0c58-4f30-92b0-8a228d4d96f6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6cd77f60-80aa-47f4-a1a1-a95e75a95d84" direction="Return" isUnique="false">
+                  <elementDefinition Id="e77be534-5267-43f1-917d-fe46e5304a0a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="005b3b82-3b9e-4f99-acf2-ca2c658b0e2d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6e26db09-bce5-4de6-80e7-c75b19f3f07a" name="vector&lt;int&gt; input" direction="In" isUnique="false">
+                  <elementDefinition Id="7863c0a3-7644-48bc-bde4-947d4fa46957" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d8ae0442-0c68-43e2-b6ba-23593ca51e89" name="And" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="916f09be-426f-4557-9c08-cf79be9ed1dd" />
+        <generalsInternal>
+          <generalization Id="ad1b26cc-1122-4c96-a973-df10f553fc5a" isSubstitutable="false">
+            <classMoniker Id="842a53b0-8456-472d-89b5-20bdc4f621db" LastKnownName="Port" />
+            <elementDefinition Id="02eed479-27c8-4f3b-b25a-6b78669c321e" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="390f6f7b-fc60-42e5-901c-0d8c60ffe744" name="calculateOutput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="be1d7620-ba2c-40e1-92aa-9a8052234b4b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cffb7100-6daf-47eb-bff2-cee6ceee32cd" direction="Return" isUnique="false">
+                  <elementDefinition Id="90c7e611-b1b8-4522-b951-0464c1538492" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="005b3b82-3b9e-4f99-acf2-ca2c658b0e2d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="dc6f04c4-d6e0-49bc-a192-bf5cabfad588" name="vector&lt;int&gt; input" direction="In" isUnique="false">
+                  <elementDefinition Id="14574b6b-8342-49f3-a485-a44cf216e43c" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="048c8445-daea-4674-822b-ad5f056180ab" name="Or" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b48de8be-01a6-43f3-8610-5bdbd225b617" />
+        <generalsInternal>
+          <generalization Id="a911464e-af84-4a52-bf6c-af2cd0c797a7" isSubstitutable="false">
+            <classMoniker Id="842a53b0-8456-472d-89b5-20bdc4f621db" LastKnownName="Port" />
+            <elementDefinition Id="669b854e-2739-4863-98c5-01ad3f3b3aa4" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="f9389e59-1fdc-48a0-ae60-aa5da65e7cfc" name="calculateOutput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6b9983f1-5a3a-4ea5-afc0-8739eb9aec53" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7f38a0c8-fe57-4454-8430-adf3c85d83e0" direction="Return" isUnique="false">
+                  <elementDefinition Id="a68495fa-ee80-43ae-b7f9-fbae5b04f1ca" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="005b3b82-3b9e-4f99-acf2-ca2c658b0e2d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2e7bfb40-99f9-4001-8123-8f660d2d9236" name="vector&lt;int&gt; input" direction="In" isUnique="false">
+                  <elementDefinition Id="79ddde30-abbc-4979-9de5-d8c6d36b1bdd" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ffd0c7fb-b9fd-4001-9c97-206fc7a1b4a4" name="Nand" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="af98ba54-7599-40d9-bcd2-8a6f0ab4fdd3" />
+        <generalsInternal>
+          <generalization Id="9619b6ba-edfe-46fb-8841-1474a852c533" isSubstitutable="false">
+            <classMoniker Id="842a53b0-8456-472d-89b5-20bdc4f621db" LastKnownName="Port" />
+            <elementDefinition Id="a46486d5-cb29-4e15-9408-87692897ca0e" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="057f415b-7deb-49a3-a645-42f9df2a71c4" name="calculateOutput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5f57a7e1-6b5e-4f93-ad41-e69d8ae72a6f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2dc1f794-6392-4973-8ef7-9e4ec88210ad" direction="Return" isUnique="false">
+                  <elementDefinition Id="9f6fcd1e-7f3d-4fdd-9cba-9abd6942a7a7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="005b3b82-3b9e-4f99-acf2-ca2c658b0e2d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="10d56243-e98c-4218-bee3-7fc928d8c5a5" name="vector&lt;int&gt; input" direction="In" isUnique="false">
+                  <elementDefinition Id="92be4abe-5107-4a25-bdc2-722ce94b67b3" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e82923b7-e9ea-49ef-9537-c6b381b59ecb" name="Nor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e0d3db50-96c0-4205-ba5c-034fe2ae1a3f" />
+        <generalsInternal>
+          <generalization Id="455ba3c6-88c3-434d-be5e-50db5be1c9b6" isSubstitutable="false">
+            <classMoniker Id="842a53b0-8456-472d-89b5-20bdc4f621db" LastKnownName="Port" />
+            <elementDefinition Id="d5cafca4-a252-4d96-85af-3ed7ac98bdb7" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="f15ba96c-7fa5-4391-9041-abf146b8c501" name="calculateOutput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="763c1133-a275-48ec-a170-20cf64cc0bc3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a9b0e771-c019-49b2-a1f7-345630618b06" direction="Return" isUnique="false">
+                  <elementDefinition Id="9edce6ef-d69e-4232-9767-6d937e68e4f6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="005b3b82-3b9e-4f99-acf2-ca2c658b0e2d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e9ca753d-867f-41f6-9b6b-85542f44193d" name="vector&lt;int&gt; input" direction="In" isUnique="false">
+                  <elementDefinition Id="28f12af5-e381-4444-a2b2-01167824950e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="cb2507d1-6428-477b-b62c-53cfceaa28d5" name="Xor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8ed2b809-adb1-418f-b043-f83dcf06752d" />
+        <generalsInternal>
+          <generalization Id="621b3101-5e90-4a7e-bbd1-b8de042aad4d" isSubstitutable="false">
+            <classMoniker Id="842a53b0-8456-472d-89b5-20bdc4f621db" LastKnownName="Port" />
+            <elementDefinition Id="9ceab62d-ed14-45bd-8457-b0cf318bd783" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="2b426c57-f6b0-4a2f-a827-a8f32c3ce7f3" name="calculateOutput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6bf181b8-76b6-4ffb-bc38-f6ed4ef0a601" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="84367ea3-dddd-4b39-a373-7e7a11b9b3fd" direction="Return" isUnique="false">
+                  <elementDefinition Id="90570a68-0273-4be7-afd3-c09f822ac64d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="005b3b82-3b9e-4f99-acf2-ca2c658b0e2d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="72e9600a-5695-4414-b719-aac24bec5295" name="vector&lt;int&gt; input" direction="In" isUnique="false">
+                  <elementDefinition Id="a2f7c12b-5c80-426e-956b-c575f7b38149" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6896c99b-3f32-4980-a285-3cd758f37ce9" name="Node" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e10f5288-3cb6-46ad-ad1b-b79481c5f163" />
+        <suppliersInternal>
+          <dependency Id="1d2da50f-80e9-430e-9439-6e0f0919404d">
+            <classMoniker Id="29d3a5da-66ea-405a-8a47-50d9d60421e6" LastKnownName="PortFactory" />
+            <elementDefinition Id="42f61811-6c0c-439a-b91b-2b063f93f870" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="13b5dc1e-6864-4fb6-aa35-2b89e80fefb4" isSubstitutable="false">
+            <classMoniker Id="d9c11a3a-3f0e-4277-b507-4721fb7c6629" LastKnownName="Observer" />
+            <elementDefinition Id="d6d65537-5653-475d-91b8-f3ceae3e477d" />
+          </generalization>
+          <generalization Id="83526082-098a-4ee7-8946-71a74a86098f" isSubstitutable="false">
+            <classMoniker Id="5d3aac4d-6e19-417f-86b7-7a895207deb2" LastKnownName="Subject" />
+            <elementDefinition Id="19e36428-9289-4819-9bb8-1fe14777ff30" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="d6cb4ac2-784c-436a-b36e-6b8a6df3787c" isDerived="false" sourceEndRoleName="Node" targetEndRoleName="Port" isLeaf="false" isAbstract="false">
+            <classMoniker Id="842a53b0-8456-472d-89b5-20bdc4f621db" LastKnownName="Port" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="60c3b961-d569-4c10-b35a-533cd4f821e1" name="Node" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5d484e96-6735-4e5f-afa1-8b56fdeefdd7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8a5d74c8-6260-47c8-b542-04cf96597836" name="Port" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e3f178e6-c9ce-42e1-b7e3-bfce41f6c119" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fa52b056-2596-4762-be49-6e57456aec8a" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="8a4d7f83-908e-4e40-8455-9bf60d533a36" name="port_" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f8130f54-339f-4ece-ae80-c0a35fe88921" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3b0f2586-3593-4141-b7b3-3d6c5a49169f" LastKnownName="Port*" />
+            </type_NamedElement>
+          </property>
+          <property Id="c3bf46d9-05b7-4dfa-8231-f4ec4fd9488d" name="inputReady_" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9ade941c-d46d-4166-a3cf-2831dd858f1a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="34c1980f-f8d9-4d33-a42c-87f64cbd4250" LastKnownName="map&lt;Node*,bool&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="464311f5-71ea-47a6-ba1f-824602a22c64" name="output_" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7aeceb7d-b642-4f44-81ac-db9773ad3010" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="005b3b82-3b9e-4f99-acf2-ca2c658b0e2d" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="c1d73597-2bfc-4733-aaed-3da432f0b31e" name="addConnection" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0e294d35-e1bd-4bf9-b636-ad6a6b7aafb4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9f44a875-36ce-4fc2-8c9a-f3a9babe9736" name="Node*" direction="In" isUnique="false">
+                  <elementDefinition Id="69398052-686f-4a46-9c3b-5f16cc0d8cd7" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3bf9d385-ae07-48c7-b93a-cadd82fd6c21" direction="Return" isUnique="false">
+                  <elementDefinition Id="2b8596bb-8581-4a35-8f9b-8bd35a51278a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="27d171c7-0826-4a0d-8e61-9539df8bf35b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c22bfdaf-9e21-4327-8bce-e576523a2d70" name="calculateOutput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="83d08ca2-d561-437b-9433-4853aae5de0f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="921532bf-c8be-4e0d-bf76-f25211055b8d" direction="Return" isUnique="false">
+                  <elementDefinition Id="0d71df95-d256-4c8a-96ff-4f95ef3d9985" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="27d171c7-0826-4a0d-8e61-9539df8bf35b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="4c50ad21-9396-4888-b5f7-355a25b52a55" name="addInput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a62ed594-e16e-475d-b671-12a733f947e8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c5a9363e-5212-46bf-896e-12cfe1da617b" name="Node*" direction="In" isUnique="false">
+                  <elementDefinition Id="f2d3af2b-f154-4881-b010-7a2408633c44" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="218898c1-556d-4cb4-a558-2dc0fa94e084" direction="Return" isUnique="false">
+                  <elementDefinition Id="1dd69386-70f9-408e-b712-7dd3a7bc4551" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="27d171c7-0826-4a0d-8e61-9539df8bf35b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="fa51179d-4c29-4ff6-a112-a6947ee89340" name="getOutput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="416e5ffc-a37c-4336-8062-1d96543ec876" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="348cacf9-4a9c-4876-8e59-dde8c686277f" direction="Return" isUnique="false">
+                  <elementDefinition Id="0874dfbc-eb20-42b6-9c23-d64940fa0b97" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="005b3b82-3b9e-4f99-acf2-ca2c658b0e2d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="15d47101-b4dc-4768-96aa-fc667b053e8e" name="update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="36479d45-b736-4359-bb6f-811fc460fb43" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="16380a62-833f-439f-b070-792be0fd3f62" direction="Return" isUnique="false">
+                  <elementDefinition Id="383a700a-7833-42ab-b35c-2d8441d623f8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="27d171c7-0826-4a0d-8e61-9539df8bf35b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8561afc3-5efe-48ce-90b3-0a2f93cb19eb" name="Node*" direction="In" isUnique="false">
+                  <elementDefinition Id="4ba34538-2d38-455a-be04-b9fb22bd1b54" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a1b7a746-1594-4836-a611-04156035a991" name="notify" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b2dd629e-ad91-44e4-8bfb-9ccf98ce6194" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cf37d494-ac30-49db-b031-89674f137ac9" direction="Return" isUnique="false">
+                  <elementDefinition Id="303d26a9-99c4-4c71-9600-b2513c3b9254" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="27d171c7-0826-4a0d-8e61-9539df8bf35b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="29d3a5da-66ea-405a-8a47-50d9d60421e6" name="PortFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fb4be08f-aeb1-493d-9b9e-fdad131f642b" />
+        <targetEnds>
+          <association Id="2b217ce2-0173-4621-8aeb-c0edeb82a659" isDerived="false" sourceEndRoleName="PortFactory" targetEndRoleName="Port" isLeaf="false" isAbstract="false">
+            <classMoniker Id="842a53b0-8456-472d-89b5-20bdc4f621db" LastKnownName="Port" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f201d6ab-639d-4367-ba32-d4068ccb9f1e" name="PortFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="01e70526-edf5-4eb5-b760-c8541f7b8602" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7f14ccc8-9fff-4f54-b3e6-ab450f05f645" name="Port" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="3740b02c-f866-4b80-8ba8-3c1ba1eaeba1" name="Lower" value="*">
+                      <elementDefinition Id="141d97a2-2d60-4012-a703-51e5577142c5" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="6aa62690-8c6d-4a9a-9828-c92b5a96f83d" name="Upper" value="*">
+                      <elementDefinition Id="1bc67b21-0ecb-435d-841b-6291ff1975db" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="5aeb4968-a358-4786-b58b-f7dc0e5e5e32" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="db8c2f7c-f6a6-4cfd-93b9-85ea27d66584" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="0b259a72-ca3e-462f-82f5-a2089e5cfe01" name="ports_" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="45ee45d9-8956-450c-a285-98a1931e1373" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6fef2dad-dacc-46f2-932a-c4dc49c0c9dc" LastKnownName="map&lt;string, Port*&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="5d710e75-a929-4c6f-b8ee-451c29e8e773" name="instance_" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2dd2992d-52cc-4d6e-b39b-e8819ab18ea5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3b9873a6-00c5-4c7a-9568-26a88834e0e6" LastKnownName="PortFactory*" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="949672f7-046e-4213-a638-c724d5e65b4b" name="create" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="71992cec-3673-403a-8b8f-fd6721a73983" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4bdaa8cb-ad4e-448b-a6c0-62dd0f6d112d" direction="Return" isUnique="false">
+                  <elementDefinition Id="b294e673-6c6c-4a6d-b64f-217b2c2c790a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e55ca7f4-4842-400c-9ac7-795a4f40874d" LastKnownName="Port*" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="daf7a0cf-c187-4be7-9983-4c26d440631d" name="string" direction="In" isUnique="false">
+                  <elementDefinition Id="a5f9cf8b-9d9a-45ed-ab4a-aa9e210be06f" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a16e4c66-91fe-44d4-9341-53bad3f65211" name="instance" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c14a4e4c-0297-489c-b14b-d5afd0323cf4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3dce8f57-5909-4757-a2e6-d984c51876c8" direction="Return" isUnique="false">
+                  <elementDefinition Id="5d2213c6-9ba8-4773-a7c9-1b3984a187e7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a947ad21-0904-4518-b105-6cd0d2614d3d" LastKnownName="PortFactory&amp;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a629846f-7028-49c5-a75a-7d60942d95e1" name="addPort" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="34b45d4a-bed7-430f-8026-63ca50da5fd4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="05e755f0-4ee1-4188-858d-eea867278333" name="string" direction="In" isUnique="false">
+                  <elementDefinition Id="05f23942-e91d-42db-8d6f-64d752627ae2" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="de7ee36f-8d3e-4ded-93ab-e84b4c7d109d" name="Port*" direction="In" isUnique="false">
+                  <elementDefinition Id="6b3ec15d-276b-494a-b000-4e17cef0a97c" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="442dc559-fed6-441e-98b9-5b751f587fa4" direction="Return" isUnique="false">
+                  <elementDefinition Id="d5ea1a5b-514d-4810-823c-02bd2aa34d98" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="27d171c7-0826-4a0d-8e61-9539df8bf35b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f6d9d581-a6e7-4151-95cf-b75595691b90" name="Input" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5efac129-01f9-49ff-bd6c-2b643d11e2e4" />
+        <generalsInternal>
+          <generalization Id="f952e752-9367-496b-b861-69f75ac80c9e" isSubstitutable="false">
+            <classMoniker Id="842a53b0-8456-472d-89b5-20bdc4f621db" LastKnownName="Port" />
+            <elementDefinition Id="fcca8d55-c144-4a42-a0e4-c16b244c3f0f" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="aa43be60-fad8-4734-8f56-5dd870bc2b14" name="calculateOutput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b8480a86-c1b4-404f-9610-7914ebb71395" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6388dcea-e5d6-45f1-bd73-1eb7dfa965a2" direction="Return" isUnique="false">
+                  <elementDefinition Id="985e0afa-cbbc-464a-86a7-bfbf75ace10e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="005b3b82-3b9e-4f99-acf2-ca2c658b0e2d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6abedf34-4e2c-445b-bd52-b9f370acce34" name="vector&lt;int&gt; input" direction="In" isUnique="false">
+                  <elementDefinition Id="7ab9b6f6-bbf1-4d21-a3b1-5746c9c361a3" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="897fb3dd-590d-4e02-9da3-0cbacdccdd28" name="Probe" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="01b77cb9-a935-44bd-bb57-e66ba63b47e8" />
+        <generalsInternal>
+          <generalization Id="6f1084ac-a8ee-48d9-bc52-14cdd2b9cd96" isSubstitutable="false">
+            <classMoniker Id="842a53b0-8456-472d-89b5-20bdc4f621db" LastKnownName="Port" />
+            <elementDefinition Id="a8d3821c-fc9f-4348-8a53-b4a5f2cccd6a" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="acd35ba3-b847-4313-b992-a998ff0fcdae" name="calculateOutput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="43e3c09a-931d-4ec5-8679-a546b6f3e177" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4bcd2803-cb87-4a15-8e08-49cc223121d6" direction="Return" isUnique="false">
+                  <elementDefinition Id="fe16190d-c9db-4c91-9ea9-573b6c11cbe6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="005b3b82-3b9e-4f99-acf2-ca2c658b0e2d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e4cb5fe3-ef10-4fa4-8b63-c5663f309d52" name="vector&lt;int&gt; input" direction="In" isUnique="false">
+                  <elementDefinition Id="a6d7e19a-6a29-402e-a705-cbf867e24bff" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a9167ab3-ef08-482e-b0a0-5f44bf63f0be" name="Circuit" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="69e53573-1a93-4e2f-96b5-6887513932be" />
+        <suppliersInternal>
+          <dependency Id="dd1b176a-e433-483d-97c3-94e2d097ff62">
+            <classMoniker Id="08054151-5a2e-47b4-83d9-d3a9ba937e65" LastKnownName="FileReader" />
+            <elementDefinition Id="aac41794-af9c-4f14-99d3-eae0b8548830" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="ba308340-e6a9-4719-9f97-7b10fb060868" isDerived="false" sourceEndRoleName="Circuit" targetEndRoleName="Node" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6896c99b-3f32-4980-a285-3cd758f37ce9" LastKnownName="Node" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4183d013-90f9-4b13-bed0-d818bb2ee1bc" name="Circuit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2d456022-de03-4c3c-abe0-e3487d52e365" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6b3fe9a3-e5c4-454f-80cb-b93d463c6a97" name="Node" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="5d300ac7-1c68-48e1-84ce-f33e21a7b3b6" name="Lower" value="*">
+                      <elementDefinition Id="4b187838-6b8b-4502-8215-de3670c4d9b6" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="f61d58a3-ba80-4ae4-8404-3bf7e11f9b2e" name="Upper" value="*">
+                      <elementDefinition Id="4a2329f8-517b-4523-9a99-4aed63bb317a" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="eb3d4d61-db54-48f8-a45a-a6a218725f85" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="18b1ddba-b730-4525-8ba3-5ba54d4f60d4" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="573c4cf6-e66b-468c-afc0-a8365d23d0a4" name="nodes_" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e3496488-a5fe-43d3-926a-398ab339c051" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3990eeb4-75f3-4290-ab4f-bf6072fb7bd0" LastKnownName="map&lt;Node*, string&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="06d5f8e0-13de-42e5-882c-b884da3d4452" name="createCircuit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5fa37d8c-6cf8-47fb-b58e-63d2f2a39f7b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ea0d2494-7d5e-4ba6-b3c3-5cd2c4f7e404" name="string" direction="In" isUnique="false">
+                  <elementDefinition Id="5c797f60-7348-42f8-ad9c-2016324d6387" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="23bb3c79-c7fd-40de-b578-86106c6e8187" direction="Return" isUnique="false">
+                  <elementDefinition Id="d47ef3d5-d93e-4ce3-9bad-57a751c7996d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="27d171c7-0826-4a0d-8e61-9539df8bf35b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6a14a31d-013a-493c-8391-6a4bde8282a1" name="calculateResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e8d4c514-eee3-47e7-a65a-11883f749d09" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="db8c420e-4f69-405d-9b51-487bd4c9129b" direction="Return" isUnique="false">
+                  <elementDefinition Id="a1aed67c-a955-4ff2-9657-33941597eaf6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="27d171c7-0826-4a0d-8e61-9539df8bf35b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f196b9c9-6b08-4a57-b260-d944bf6da62c" name="showResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="61ef9df0-633c-438d-8732-2ad644bfa4f1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="48378316-7cd3-415b-9c66-44ec29a2ec3f" direction="Return" isUnique="false">
+                  <elementDefinition Id="d2c7ae46-8a4e-428b-9014-4a59505c2547" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="27d171c7-0826-4a0d-8e61-9539df8bf35b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="08054151-5a2e-47b4-83d9-d3a9ba937e65" name="FileReader" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e3ba090d-398d-4be8-8fdf-592663c633f4" />
+        <ownedOperationsInternal>
+          <operation Id="8fc98ad7-5e3e-45b1-a9e5-8c8422fce02f" name="readFile" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="97bb2374-85c6-4b73-af54-e8e87bddb3ec" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2e74114e-1d24-4478-b04b-72566f0b0c6d" name="string" direction="In" isUnique="false">
+                  <elementDefinition Id="d97ab183-dec6-4f23-9943-3abe7f1f3478" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bbeb3899-0e4e-4d51-9378-5940b260a769" direction="Return" isUnique="false">
+                  <elementDefinition Id="c16bd741-b919-4547-91a7-bc64e7d95200" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="919671d1-fcdf-4440-bff1-a0c9051304bd" LastKnownName="vector&lt;string&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d9c11a3a-3f0e-4277-b507-4721fb7c6629" name="Observer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="65885d3c-8183-4f1f-9aba-1646d1bee925" />
+        <ownedOperationsInternal>
+          <operation Id="323c22e4-acda-400a-948f-13c202ad271c" name="update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="833124a4-41a4-45ff-b966-fc445352c5d6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bf4e20ef-f6da-4fe2-af92-5c34ed2329dd" direction="Return" isUnique="false">
+                  <elementDefinition Id="5c8b31a8-abf0-42f5-904d-e62642f24c42" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="27d171c7-0826-4a0d-8e61-9539df8bf35b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6dc2e7d4-6dce-4528-9402-e8340d63c1a0" name="Node*" direction="In" isUnique="false">
+                  <elementDefinition Id="a0bbf24b-2e58-4147-bb14-0a00484cc067" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="842a53b0-8456-472d-89b5-20bdc4f621db" name="Port" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="65525b96-9f63-40f9-a694-ce79cb4c00cf" />
+        <ownedOperationsInternal>
+          <operation Id="111698b1-0348-4304-a036-080189a61f12" name="calculateOutput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f9dd2747-e064-4a21-b969-4631d505ee52" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="263f65d1-32c6-42c4-b5e4-797930603863" direction="Return" isUnique="false">
+                  <elementDefinition Id="1ceb178d-935d-44d4-b902-add6d297cc73" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="005b3b82-3b9e-4f99-acf2-ca2c658b0e2d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="205ad69d-391f-4303-8500-32c84b827214" name="vector&lt;int&gt; input" direction="In" isUnique="false">
+                  <elementDefinition Id="814fcb87-0efb-433c-a5db-3a59d1930b4b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5d3aac4d-6e19-417f-86b7-7a895207deb2" name="Subject" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f1075b1b-099e-4224-a994-d1dff3fd5e2b" />
+        <ownedAttributesInternal>
+          <property Id="2da92c3c-e66e-4e95-b53f-ea6141e79a9d" name="connections_" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5d841c27-da55-48be-ae43-02a7118c0068" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e27b9646-a7d2-48de-b839-f6b275ee5d9c" LastKnownName="vector&lt;Observer*&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="07e1450f-e4a6-4ca4-8389-8f68e8a539c5" name="addConnection" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="be34d64b-7d66-44d4-aec4-31b4e141cb11" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ce323186-9ac9-4220-b010-d4352de75d6c" name="Observer*" direction="In" isUnique="false">
+                  <elementDefinition Id="896436ed-79fd-48fc-a9b5-cbd7c8075a1a" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="646a4509-17ae-4873-b09f-6962a48c0a38" direction="Return" isUnique="false">
+                  <elementDefinition Id="fad0978f-1d8d-48ad-92f9-8db6a6c3ba2b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="27d171c7-0826-4a0d-8e61-9539df8bf35b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="43020f4a-ae1f-4189-ae7f-73658e5bbc54" name="notify" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e3d55900-77ac-4288-a138-ec9ef75bcc17" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="097788ad-5e01-45e6-a16e-bba22cd7325b" direction="Return" isUnique="false">
+                  <elementDefinition Id="d47a490b-6d4a-4b12-884f-05042a175fb4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="27d171c7-0826-4a0d-8e61-9539df8bf35b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="3b0f2586-3593-4141-b7b3-3d6c5a49169f" name="Port*" isAbstract="false" isLeaf="false" cachedFullName="Port*">
+        <elementDefinition Id="87a2b666-1226-428f-923c-da4e2fd0fbe0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3b9873a6-00c5-4c7a-9568-26a88834e0e6" name="PortFactory*" isAbstract="false" isLeaf="false" cachedFullName="PortFactory*">
+        <elementDefinition Id="7dd296fb-bc73-4c45-acc2-5045d662feef" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a947ad21-0904-4518-b105-6cd0d2614d3d" name="PortFactory&amp;" isAbstract="false" isLeaf="false" cachedFullName="PortFactory&amp;">
+        <elementDefinition Id="377caa19-6d6d-4334-9518-3021bc89d580" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="62e6e12f-9a96-4827-b0bd-26a28fbc68b7" name="Logical Circuits Models">
+    <elementDefinition Id="d19ab128-b45a-404b-9e81-4bb1ea322398" />
+  </package>
+</logicalClassDesignerModel>
