@@ -7,7 +7,10 @@ Nand::Nand(const std::string& sID)
 {
 }
 
-int Nand::calculateOutput()
+int Nand::calculateOutput(std::vector<int> input)
 {
-	return 1;
+	int result = 1;
+	for (int i = 0; i < input.size(); i++)
+		result = result & input[i];
+	return (result + 1) % 2;
 }

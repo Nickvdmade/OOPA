@@ -7,7 +7,7 @@ InputLow::InputLow(const std::string& sID)
 {
 }
 
-int InputLow::calculateOutput()
+int InputLow::calculateOutput(std::vector<int> input)
 {
-	return 1;
+	return 0;
 }

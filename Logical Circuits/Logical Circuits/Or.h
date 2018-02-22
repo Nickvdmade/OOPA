@@ -7,7 +7,7 @@ private:
 	Or(const std::string&);
 
 public:
-	int calculateOutput() override;
+	int calculateOutput(std::vector<int> input) override;
 
 private:
 	static Or _instance;

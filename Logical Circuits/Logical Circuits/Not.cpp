@@ -1,13 +1,13 @@
 #include "Not.h"
 
-Not Not::_instance("XOR");
+Not Not::_instance("NOT");
 
 Not::Not(const std::string& sID)
 	: Port(sID)
 {
 }
 
-int Not::calculateOutput()
+int Not::calculateOutput(std::vector<int> input)
 {
-	return 1;
+	return (input[0] + 1) % 2;
 }

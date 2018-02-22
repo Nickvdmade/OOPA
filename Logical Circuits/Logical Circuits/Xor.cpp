@@ -7,7 +7,10 @@ Xor::Xor(const std::string& sID)
 {
 }
 
-int Xor::calculateOutput()
+int Xor::calculateOutput(std::vector<int> input)
 {
-	return 1;
+	int result = 0;
+	for (int i = 0; i < input.size(); i++)
+		result = result ^ input[i];
+	return result;
 }

@@ -7,7 +7,7 @@ private:
 	Probe(const std::string&);
 
 public:
-	int calculateOutput() override;
+	int calculateOutput(std::vector<int> input) override;
 
 private:
 	static Probe _instance;

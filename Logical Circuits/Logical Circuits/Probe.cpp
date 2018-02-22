@@ -7,7 +7,7 @@ Probe::Probe(const std::string& sID)
 {
 }
 
-int Probe::calculateOutput()
+int Probe::calculateOutput(std::vector<int> input)
 {
-	return 1;
+	return input[0];
 }

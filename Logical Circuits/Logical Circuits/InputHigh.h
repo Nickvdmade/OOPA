@@ -7,7 +7,7 @@ private:
 	InputHigh(const std::string&);
 
 public:
-	int calculateOutput() override;
+	int calculateOutput(std::vector<int> input) override;
 
 private:
 	static InputHigh _instance;

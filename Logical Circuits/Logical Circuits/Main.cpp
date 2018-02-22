@@ -8,6 +8,6 @@ void main()
 	circuit.calculateResult();
 	circuit.showResult();
 
-	std::cout << "Press a key" << std::endl;
+	std::cout << "Press a key to exit" << std::endl;
 	getchar();
 }

@@ -7,7 +7,7 @@ private:
 	Xor(const std::string&);
 
 public:
-	int calculateOutput() override;
+	int calculateOutput(std::vector<int> input) override;
 
 private:
 	static Xor _instance;

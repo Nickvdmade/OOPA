@@ -1,5 +1,6 @@
 #include "Circuit.h"
 #include "FileReader.h"
+#include <iostream>
 
 Circuit::Circuit()
 {
@@ -11,27 +12,95 @@ Circuit::~Circuit()
 
 void Circuit::createCircuit(std::string fileName)
 {
+	std::cout << "Circuit created: " << fileName << std::endl << std::endl;
 	std::vector<std::string> info = FileReader::readFile(fileName);
-	for (int i = 0; i < info.size(); i++)
-	{
-		std::string line = info[i];
-		if (line[0] != '#')
-		{
-			int startposition = 0;
-			int position = line.find(':');
-			std::string name = line.substr(startposition, position - startposition);
-			for (position++; (line[position] == ' ' || line[position] == '\t') && position < line.size(); position++);
-			startposition = position;
-			position = line.find(';', position);
-			std::string type = line.substr(startposition, position - startposition);
-		}
-	}
+	int index = createNodes(info, 0);
+	createConnections(info, index);
 }
 
 void Circuit::calculateResult()
 {
+	std::cout << "Input nodes:" << std::endl;
+	for (auto it = nodes_.begin(); it != nodes_.end(); ++it)
+	{
+		if (it->second->isInput())
+		{
+			std::cout << "\t";
+			it->second->notify();
+			it->second->show();
+		}
+	}
+	std::cout << std::endl << "Results calculated" << std::endl << std::endl;
 }
 
 void Circuit::showResult()
 {
+	std::cout << "Output for all probe nodes:" << std::endl;
+	for (auto it = nodes_.begin(); it != nodes_.end(); ++it)
+	{
+		if (it->second->isProbe())
+		{
+			std::cout << "\t";
+			it->second->show();
+		}
+	}
+	std::cout << std::endl;
+}
+
+int Circuit::createNodes(std::vector<std::string> info, int index)
+{
+	for (; index < info.size(); index++)
+	{
+		std::string line = info[index];
+		if (line[0] != '#')
+		{
+			if (line != "")
+			{
+				int startPosition = 0;
+				int position = line.find(':');
+				std::string name = line.substr(startPosition, position - startPosition);
+				for (position++; (line[position] == ' ' || line[position] == '\t') && position < line.size(); position++);
+				startPosition = position;
+				position = line.find(';', position);
+				std::string type = line.substr(startPosition, position - startPosition);
+				nodes_[name] = std::make_shared<Node>(type, name);
+			}
+			else
+			{
+				return index++;
+			}
+		}
+	}
+}
+
+void Circuit::createConnections(std::vector<std::string> info, int index)
+{
+	for (; index < info.size(); index++)
+	{
+		std::string line = info[index];
+		if (line[0] != '#' && line != "")
+		{
+			int startPosition = 0;
+			int position = line.find(':');
+			std::string name = line.substr(startPosition, position - startPosition);
+			std::shared_ptr<Node> node = nodes_[name];
+			for (position++; (line[position] == ' ' || line[position] == '\t') && position < line.size(); position++);
+			startPosition = position;
+			position = line.find(',', startPosition);
+			while (position != -1)
+			{
+				std::string connection = line.substr(startPosition, position - startPosition);
+				std::shared_ptr<Node> connectedNode = nodes_[connection];
+				node->addConnection(connectedNode);
+				connectedNode->addInput(node);
+				startPosition = position + 1;
+				position = line.find(',', startPosition);
+			}
+			position = line.find(';', startPosition);
+			std::string connection = line.substr(startPosition, position - startPosition);
+			std::shared_ptr<Node> connectedNode = nodes_[connection];
+			node->addConnection(connectedNode);
+			connectedNode->addInput(node);
+		}
+	}
 }

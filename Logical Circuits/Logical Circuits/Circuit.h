@@ -14,6 +14,8 @@ public:
 	void showResult();
 
 private:
-	std::map<std::shared_ptr<Node>, std::string> nodes_;
-};
+	std::map<std::string, std::shared_ptr<Node>> nodes_;
 
+	int createNodes(std::vector<std::string> info, int index);
+	void createConnections(std::vector<std::string> info, int index);
+};

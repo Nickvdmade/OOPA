@@ -7,7 +7,10 @@ Nor::Nor(const std::string& sID)
 {
 }
 
-int Nor::calculateOutput()
+int Nor::calculateOutput(std::vector<int> input)
 {
-	return 1;
+	int result = 0;
+	for (int i = 0; i < input.size(); i++)
+		result = result | input[i];
+	return (result + 1) % 2;
 }

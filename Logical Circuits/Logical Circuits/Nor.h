@@ -7,7 +7,7 @@ private:
 	Nor(const std::string&);
 
 public:
-	int calculateOutput() override;
+	int calculateOutput(std::vector<int> input) override;
 
 private:
 	static Nor _instance;

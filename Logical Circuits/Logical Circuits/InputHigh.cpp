@@ -7,7 +7,7 @@ InputHigh::InputHigh(const std::string& sID)
 {
 }
 
-int InputHigh::calculateOutput()
+int InputHigh::calculateOutput(std::vector<int> input)
 {
 	return 1;
 }

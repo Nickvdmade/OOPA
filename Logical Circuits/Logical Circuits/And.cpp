@@ -8,7 +8,10 @@ And::And( const std::string& sID)
 {
 }
 
-int And::calculateOutput()
+int And::calculateOutput(std::vector<int> input)
 {
-	return 1;
+	int result = 1;
+	for (int i = 0; i < input.size(); i++)
+		result = result & input[i];
+	return result;
 }
