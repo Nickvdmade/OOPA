@@ -3,8 +3,13 @@
 class Nor :
 	public Port
 {
+private:
+	Nor(const std::string&);
+
 public:
-	Nor();
-	~Nor();
+	int calculateOutput() override;
+
+private:
+	static Nor _instance;
 };
 

@@ -1,12 +1,13 @@
 #include "Nor.h"
 
+Nor Nor::_instance("XOR");
 
-
-Nor::Nor()
+Nor::Nor(const std::string& sID)
+	: Port(sID)
 {
 }
 
-
-Nor::~Nor()
+int Nor::calculateOutput()
 {
+	return 1;
 }

@@ -3,8 +3,12 @@
 class Nand :
 	public Port
 {
-public:
-	Nand();
-	~Nand();
-};
+private:
+	Nand(const std::string&);
 
+public:
+	int calculateOutput() override;
+
+private:
+	static Nand _instance;
+};

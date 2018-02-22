@@ -1,12 +1,13 @@
 #include "Probe.h"
 
+Probe Probe::_instance("PROBE");
 
-
-Probe::Probe()
+Probe::Probe(const std::string& sID)
+	: Port(sID)
 {
 }
 
-
-Probe::~Probe()
+int Probe::calculateOutput()
 {
+	return 1;
 }

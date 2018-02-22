@@ -113,7 +113,8 @@
     <ClCompile Include="And.cpp" />
     <ClCompile Include="Circuit.cpp" />
     <ClCompile Include="FileReader.cpp" />
-    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="InputHigh.cpp" />
+    <ClCompile Include="InputLow.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Nand.cpp" />
     <ClCompile Include="Node.cpp" />
@@ -131,7 +132,8 @@
     <ClInclude Include="And.h" />
     <ClInclude Include="Circuit.h" />
     <ClInclude Include="FileReader.h" />
-    <ClInclude Include="Input.h" />
+    <ClInclude Include="InputHigh.h" />
+    <ClInclude Include="InputLow.h" />
     <ClInclude Include="Nand.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Nor.h" />

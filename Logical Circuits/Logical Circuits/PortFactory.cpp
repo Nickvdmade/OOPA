@@ -17,15 +17,15 @@ PortFactory& PortFactory::instance()
 	return *instance_;
 }
 
-void PortFactory::addPort(std::string name, Port port)
+void PortFactory::addPort(const std::string& name, Port& port)
 {
 	if (ports_.find(name) == ports_.end())
 	{
-		ports_.insert(std::pair<std::string, std::shared_ptr<Port>>(name, std::make_shared<Port>(port)));
+		ports_[name] = &port;
 	}
 }
 
-std::shared_ptr<Port> PortFactory::create(std::string name)
+Port* PortFactory::create(const std::string& name)
 {
 	if (ports_.find(name) != ports_.end())
 	{

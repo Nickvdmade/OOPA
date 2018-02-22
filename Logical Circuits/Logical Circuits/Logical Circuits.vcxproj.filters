@@ -42,9 +42,6 @@
     <ClCompile Include="And.cpp">
       <Filter>Source Files\Ports</Filter>
     </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>Source Files\Ports</Filter>
-    </ClCompile>
     <ClCompile Include="Nand.cpp">
       <Filter>Source Files\Ports</Filter>
     </ClCompile>
@@ -67,6 +64,12 @@
       <Filter>Source Files\Ports</Filter>
     </ClCompile>
     <ClCompile Include="PortFactory.cpp">
+      <Filter>Source Files\Ports</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHigh.cpp">
+      <Filter>Source Files\Ports</Filter>
+    </ClCompile>
+    <ClCompile Include="InputLow.cpp">
       <Filter>Source Files\Ports</Filter>
     </ClCompile>
   </ItemGroup>
@@ -107,14 +110,17 @@
     <ClInclude Include="Probe.h">
       <Filter>Header Files\Ports</Filter>
     </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>Header Files\Ports</Filter>
-    </ClInclude>
     <ClInclude Include="PortFactory.h">
       <Filter>Header Files\Ports</Filter>
     </ClInclude>
     <ClInclude Include="Node.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHigh.h">
+      <Filter>Header Files\Ports</Filter>
+    </ClInclude>
+    <ClInclude Include="InputLow.h">
+      <Filter>Header Files\Ports</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

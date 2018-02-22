@@ -19,12 +19,11 @@ void Circuit::createCircuit(std::string fileName)
 		{
 			int startposition = 0;
 			int position = line.find(':');
-			std::string name = line.substr(startposition, position - 1 - startposition);
-			for (; (line[position] == ' ' || line[position] == '\t') && position < line.size(); position++);
+			std::string name = line.substr(startposition, position - startposition);
+			for (position++; (line[position] == ' ' || line[position] == '\t') && position < line.size(); position++);
 			startposition = position;
 			position = line.find(';', position);
-			std::string type = line.substr(startposition, position - 1 - startposition);
-
+			std::string type = line.substr(startposition, position - startposition);
 		}
 	}
 }

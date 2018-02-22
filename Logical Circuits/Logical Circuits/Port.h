@@ -1,8 +1,12 @@
 #pragma once
+
+#include <string>
+
 class Port
 {
+protected:
+	Port(const std::string&);
 public:
-	Port();
-	~Port();
+	virtual ~Port();
+	virtual int calculateOutput() = 0;
 };
-

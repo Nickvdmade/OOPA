@@ -3,8 +3,13 @@
 class And :
 	public Port
 {
+private:
+	And(const std::string&);
+
 public:
-	And();
-	~And();
+	int calculateOutput() override;
+
+private:
+	static And _instance;
 };
 

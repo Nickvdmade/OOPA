@@ -1,15 +1,15 @@
 #pragma once
 #include "Port.h"
-class Not :
+class InputHigh :
 	public Port
 {
 private:
-	Not(const std::string&);
+	InputHigh(const std::string&);
 
 public:
 	int calculateOutput() override;
 
 private:
-	static Not _instance;
+	static InputHigh _instance;
 };
 

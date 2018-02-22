@@ -1,12 +1,13 @@
 #include "Nand.h"
 
+Nand Nand::_instance("NAND");
 
-
-Nand::Nand()
+Nand::Nand(const std::string& sID)
+	: Port(sID)
 {
 }
 
-
-Nand::~Nand()
+int Nand::calculateOutput()
 {
+	return 1;
 }

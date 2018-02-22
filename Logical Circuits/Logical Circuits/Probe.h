@@ -3,8 +3,13 @@
 class Probe :
 	public Port
 {
+private:
+	Probe(const std::string&);
+
 public:
-	Probe();
-	~Probe();
+	int calculateOutput() override;
+
+private:
+	static Probe _instance;
 };
 

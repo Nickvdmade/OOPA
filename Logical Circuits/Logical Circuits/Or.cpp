@@ -1,12 +1,13 @@
 #include "Or.h"
 
+Or Or::_instance("XOR");
 
-
-Or::Or()
+Or::Or(const std::string& sID)
+	: Port(sID)
 {
 }
 
-
-Or::~Or()
+int Or::calculateOutput()
 {
+	return 1;
 }

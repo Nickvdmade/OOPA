@@ -1,12 +1,14 @@
 #include "And.h"
+#include "PortFactory.h"
 
+And And::_instance("AND");
 
-
-And::And()
+And::And( const std::string& sID)
+	: Port( sID )
 {
 }
 
-
-And::~And()
+int And::calculateOutput()
 {
+	return 1;
 }

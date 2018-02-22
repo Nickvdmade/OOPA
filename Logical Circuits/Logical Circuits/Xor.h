@@ -3,8 +3,13 @@
 class Xor :
 	public Port
 {
+private:
+	Xor(const std::string&);
+
 public:
-	Xor();
-	~Xor();
+	int calculateOutput() override;
+
+private:
+	static Xor _instance;
 };
 

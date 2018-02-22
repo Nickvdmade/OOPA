@@ -3,8 +3,12 @@
 class Or :
 	public Port
 {
-public:
-	Or();
-	~Or();
-};
+private:
+	Or(const std::string&);
 
+public:
+	int calculateOutput() override;
+
+private:
+	static Or _instance;
+};
