@@ -8,7 +8,7 @@ Subject::~Subject()
 {
 }
 
-void Subject::addConnection(const std::shared_ptr<Observer> connection)
+void Subject::addConnection(Observer* connection)
 {
 	connections_.push_back(connection);
 }

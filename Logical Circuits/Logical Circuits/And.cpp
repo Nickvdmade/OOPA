@@ -15,3 +15,13 @@ int And::calculateOutput(std::vector<int> input)
 		result = result & input[i];
 	return result;
 }
+
+bool And::isInput()
+{
+	return false;
+}
+
+bool And::isProbe()
+{
+	return false;
+}

@@ -1,5 +1,6 @@
 #pragma once
 #include "Port.h"
+
 class And :
 	public Port
 {
@@ -8,6 +9,8 @@ private:
 
 public:
 	int calculateOutput(std::vector<int> input) override;
+	bool isInput() override;
+	bool isProbe() override;
 
 private:
 	static And _instance;

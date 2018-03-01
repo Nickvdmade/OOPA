@@ -8,6 +8,10 @@ Circuit::Circuit()
 
 Circuit::~Circuit()
 {
+	for (auto it = nodes_.begin(); it != nodes_.end(); ++it)
+	{
+		delete it->second;
+	}
 }
 
 void Circuit::createCircuit(std::string fileName)
@@ -40,8 +44,16 @@ void Circuit::showResult()
 	{
 		if (it->second->isProbe())
 		{
-			std::cout << "\t";
-			it->second->show();
+			if (it->second->checkOutput())
+			{
+				std::cout << "\t";
+				it->second->show();
+			}
+			else
+			{
+				std::cout << std::endl <<  "ERROR: Probe does not have a correct output." << std::endl << std::endl;
+				return;
+			}
 		}
 	}
 	std::cout << std::endl;
@@ -63,7 +75,7 @@ int Circuit::createNodes(std::vector<std::string> info, int index)
 				startPosition = position;
 				position = line.find(';', position);
 				std::string type = line.substr(startPosition, position - startPosition);
-				nodes_[name] = std::make_shared<Node>(type, name);
+				nodes_[name] = new Node(type, name);
 			}
 			else
 			{
@@ -83,14 +95,14 @@ void Circuit::createConnections(std::vector<std::string> info, int index)
 			int startPosition = 0;
 			int position = line.find(':');
 			std::string name = line.substr(startPosition, position - startPosition);
-			std::shared_ptr<Node> node = nodes_[name];
+			Node* node = nodes_[name];
 			for (position++; (line[position] == ' ' || line[position] == '\t') && position < line.size(); position++);
 			startPosition = position;
 			position = line.find(',', startPosition);
 			while (position != -1)
 			{
 				std::string connection = line.substr(startPosition, position - startPosition);
-				std::shared_ptr<Node> connectedNode = nodes_[connection];
+				Node* connectedNode = nodes_[connection];
 				node->addConnection(connectedNode);
 				connectedNode->addInput(node);
 				startPosition = position + 1;
@@ -98,7 +110,7 @@ void Circuit::createConnections(std::vector<std::string> info, int index)
 			}
 			position = line.find(';', startPosition);
 			std::string connection = line.substr(startPosition, position - startPosition);
-			std::shared_ptr<Node> connectedNode = nodes_[connection];
+			Node* connectedNode = nodes_[connection];
 			node->addConnection(connectedNode);
 			connectedNode->addInput(node);
 		}

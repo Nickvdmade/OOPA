@@ -11,3 +11,13 @@ int InputHigh::calculateOutput(std::vector<int> input)
 {
 	return 1;
 }
+
+bool InputHigh::isInput()
+{
+	return true;
+}
+
+bool InputHigh::isProbe()
+{
+	return false;
+}

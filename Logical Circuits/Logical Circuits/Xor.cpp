@@ -14,3 +14,13 @@ int Xor::calculateOutput(std::vector<int> input)
 		result = result ^ input[i];
 	return result;
 }
+
+bool Xor::isInput()
+{
+	return false;
+}
+
+bool Xor::isProbe()
+{
+	return false;
+}

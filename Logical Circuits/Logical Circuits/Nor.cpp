@@ -12,5 +12,15 @@ int Nor::calculateOutput(std::vector<int> input)
 	int result = 0;
 	for (int i = 0; i < input.size(); i++)
 		result = result | input[i];
-	return (result + 1) % 2;
+	return !result;
+}
+
+bool Nor::isInput()
+{
+	return false;
+}
+
+bool Nor::isProbe()
+{
+	return false;
 }

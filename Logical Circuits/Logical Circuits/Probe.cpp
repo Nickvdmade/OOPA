@@ -11,3 +11,13 @@ int Probe::calculateOutput(std::vector<int> input)
 {
 	return input[0];
 }
+
+bool Probe::isInput()
+{
+	return false;
+}
+
+bool Probe::isProbe()
+{
+	return true;
+}

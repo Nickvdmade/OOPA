@@ -6,20 +6,19 @@ Node::Node(const std::string& portType, const std::string& name)
 {
 	PortFactory& portFactory = PortFactory::instance();
 	port_ = portFactory.create(portType);
-	portType_ = portType;
 	name_ = name;
-	output_ = 0;
+	output_ = -1;
 }
 
 Node::~Node()
 {
 }
 
-void Node::addInput(const std::shared_ptr<Node> node)
+void Node::addInput(Node* node)
 {
 	for (auto it = inputReady_.begin(); it != inputReady_.end(); ++it)
 	{
-		if (it->first->name_ == node->name_)
+		if (it->first == node)
 			return;
 	}
 	inputReady_[node] = false;
@@ -43,17 +42,18 @@ int Node::getOutput() const
 void Node::notify()
 {
 	calculateOutput();
+	//std::cout << name_ << ":\t" << output_ << std::endl;
 	for (int i = 0; i < connections_.size(); i++)
 	{
-		connections_[i]->update(std::make_shared<Node>(*this));
+		connections_[i]->update(this);
 	}
 }
 
-void Node::update(const std::shared_ptr<Node> node)
+void Node::update(Node* node)
 {
 	for (auto it = inputReady_.begin(); it != inputReady_.end(); ++it)
 	{
-		if (it->first->name_ == node->name_)
+		if (it->first == node)
 			it->second = true;
 	}
 	for (auto it = inputReady_.begin(); it != inputReady_.end(); ++it)
@@ -66,16 +66,23 @@ void Node::update(const std::shared_ptr<Node> node)
 
 bool Node::isInput() const
 {
-	if (portType_ == "INPUT_HIGH" || portType_ == "INPUT_LOW")
+	if (port_->isInput())
 		return true;
 	return false;
 }
 
 bool Node::isProbe() const
 {
-	if (portType_ == "PROBE")
+	if (port_->isProbe())
 		return true;
 	return false;
+}
+
+bool Node::checkOutput() const
+{
+	if (output_ < 0)
+		return false;
+	return true;
 }
 
 void Node::show() const

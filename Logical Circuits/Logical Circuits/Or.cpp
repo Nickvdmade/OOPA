@@ -14,3 +14,13 @@ int Or::calculateOutput(std::vector<int> input)
 		result = result | input[i];
 	return result;
 }
+
+bool Or::isInput()
+{
+	return false;
+}
+
+bool Or::isProbe()
+{
+	return false;
+}

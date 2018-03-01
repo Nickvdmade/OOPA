@@ -5,10 +5,10 @@
 class Subject
 {
 protected:
-	std::vector<std::shared_ptr<Observer>> connections_;
+	std::vector<Observer*> connections_;
 public:
 	Subject();
 	virtual ~Subject();
-	void addConnection(const std::shared_ptr<Observer> connection);
+	void addConnection(Observer* connection);
 	virtual void notify() = 0;
 };
