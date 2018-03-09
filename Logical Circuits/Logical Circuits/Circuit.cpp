@@ -1,6 +1,7 @@
 #include "Circuit.h"
 #include "FileReader.h"
 #include <iostream>
+#include <sstream>
 
 Circuit::Circuit()
 {
@@ -16,22 +17,23 @@ Circuit::~Circuit()
 
 void Circuit::createCircuit(std::string fileName)
 {
-	std::cout << "Circuit created: " << fileName << std::endl << std::endl;
+	std::cout << "Creating circuit: " << fileName << std::endl;
 	std::vector<std::string> info = FileReader::readFile(fileName);
 	int index = createNodes(info, 0);
 	createConnections(info, index);
+	std::cout << "Circuit created" << std::endl << std::endl;
 }
 
 void Circuit::calculateResult()
 {
-	std::cout << "Input nodes:" << std::endl;
+	std::cout << "Calculating nodes:" << std::endl;
 	for (auto it = nodes_.begin(); it != nodes_.end(); ++it)
 	{
 		if (it->second->isInput())
 		{
-			std::cout << "\t";
+			std::cout << "\tInput ";
 			it->second->notify();
-			it->second->show();
+			//it->second->show();
 		}
 	}
 	std::cout << std::endl << "Results calculated" << std::endl << std::endl;
@@ -46,13 +48,13 @@ void Circuit::showResult()
 		{
 			if (it->second->checkOutput())
 			{
-				std::cout << "\t";
 				it->second->show();
 			}
 			else
 			{
-				std::cout << std::endl <<  "ERROR: Probe does not have a correct output." << std::endl << std::endl;
-				return;
+				std::stringstream errorMsg;
+				errorMsg << std::endl << "ERROR: Probe does not have a correct output.";
+				throw std::exception(errorMsg.str().c_str()); 
 			}
 		}
 	}

@@ -32,6 +32,6 @@ Port* PortFactory::create(const std::string& name)
 		return ports_[name];
 	}
 	std::stringstream errorMsg;
-	errorMsg << "Port name is not available";
+	errorMsg << "ERROR: Port name is not available";
 	throw std::exception(errorMsg.str().c_str());
 }

@@ -41,8 +41,11 @@ int Node::getOutput() const
 
 void Node::notify()
 {
+	if (!isInput())
+		std::cout << "\t";
+	std::cout << "\t" << name_ << ":\t";
 	calculateOutput();
-	//std::cout << name_ << ":\t" << output_ << std::endl;
+	std::cout << output_ << std::endl;
 	for (int i = 0; i < connections_.size(); i++)
 	{
 		connections_[i]->update(this);
@@ -87,5 +90,5 @@ bool Node::checkOutput() const
 
 void Node::show() const
 {
-	std::cout << name_ << ": " << output_ << std::endl;
+	std::cout << "\t" << name_ << ":\t" << output_ << std::endl;
 }
